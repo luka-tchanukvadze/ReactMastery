@@ -74,9 +74,19 @@ function Menu() {
   return (
     <main className="menu">
       <h2>Our Menu</h2>
-      <Pizza />
-      <Pizza />
-      <Pizza />
+      <Pizza
+        name="pizza spinaci"
+        ingredient="random thing here"
+        photoName="/pizzas/spinaci.jpg"
+        price={3}
+      />
+
+      <Pizza
+        name="pizza funghi"
+        ingredient="new random thing here"
+        photoName="/pizzas/funghi.jpg"
+        price={10}
+      />
     </main>
   );
 }
@@ -93,13 +103,17 @@ function Footer() {
   return <footer className="footer">{isOpn} we are open</footer>;
 }
 
-function Pizza() {
+function Pizza(props) {
   return (
-    <>
-      <img src="/pizzas/spinaci.jpg" alt="why" />
-      <h3>Pizza</h3>
-      <p>text</p>
-    </>
+    <div className="pizza">
+      <img src={`${props.photoName}`} alt={props.name} />
+
+      <div>
+        <h3>{props.name}</h3>
+        <p>{props.ingredient}</p>
+        <span>{props.price}</span>
+      </div>
+    </div>
   );
 }
 
