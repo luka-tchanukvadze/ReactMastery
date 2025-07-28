@@ -72,7 +72,15 @@ function Menu() {
 }
 
 function Footer() {
-  return <footer>{new Date().toLocaleTimeString()} we are open</footer>;
+  const hour = new Date().getHours();
+  const openHour = 12;
+  const closeHour = 22;
+  const isOpn = hour >= openHour && hour <= closeHour;
+
+  // if (hour >= openHour && hour <= closeHour) alert("we are current;y open");
+  // else alert("NOT open");
+
+  return <footer>{isOpn} we are open</footer>;
 }
 
 function Pizza() {
