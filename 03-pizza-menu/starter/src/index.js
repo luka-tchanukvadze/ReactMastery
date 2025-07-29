@@ -87,7 +87,9 @@ function Menu() {
             <Pizza pizzaObj={pizza} key={pizza.name} />
           ))}
         </ul>
-      ) : null}
+      ) : (
+        <p>We're still workin on our menu</p>
+      )}
     </main>
   );
 }
@@ -101,7 +103,9 @@ function Footer() {
   // if (hour >= openHour && hour <= closeHour) alert("we are current;y open");
   // else alert("NOT open");
 
-  return <footer className="footer">{isOpn && <p>Open</p>}</footer>;
+  return (
+    <footer className="footer">{isOpn ? <p>Open</p> : <p>Closed</p>}</footer>
+  );
 }
 
 function Pizza(props) {
