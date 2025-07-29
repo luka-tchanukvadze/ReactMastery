@@ -103,12 +103,17 @@ function Footer() {
   // if (hour >= openHour && hour <= closeHour) alert("we are current;y open");
   // else alert("NOT open");
 
+  if (!isOpn) {
+    return <p>little bit early</p>;
+  }
+
   return (
     <footer className="footer">{isOpn ? <p>Open</p> : <p>Closed</p>}</footer>
   );
 }
 
 function Pizza(props) {
+  if (props.pizzaObj.soldOut) return null;
   return (
     <li className="pizza">
       <img src={`${props.pizzaObj.photoName}`} alt={props.pizzaObj.name} />
