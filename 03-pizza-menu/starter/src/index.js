@@ -103,13 +103,13 @@ function Footer() {
   // if (hour >= openHour && hour <= closeHour) alert("we are current;y open");
   // else alert("NOT open");
 
-  if (!isOpn) {
-    return <p>little bit early</p>;
-  }
-
   return (
-    <footer className="footer">{isOpn ? <p>Open</p> : <p>Closed</p>}</footer>
+    <footer className="footer">{isOpn ? <Order /> : <p>Closed</p>}</footer>
   );
+}
+
+function Order() {
+  return <p>Open and order</p>;
 }
 
 function Pizza(props) {
