@@ -17,7 +17,6 @@ function App() {
   function handleNext() {
     if (step < 3) setStep((prev) => prev + 1);
   }
-
   return (
     <>
       <button className="close" onClick={() => setIsOpen((prev) => !prev)}>
