@@ -1,4 +1,4 @@
-function App() {
+export default function App() {
   return (
     <>
       <div> hey</div>
@@ -6,4 +6,7 @@ function App() {
   );
 }
 
-export default App;
+function Logo() {}
+function Form() {}
+function PackingList() {}
+function Stats() {}
