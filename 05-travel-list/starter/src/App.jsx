@@ -127,5 +127,3 @@ function Stats() {
     </footer>
   );
 }
-
-// Challenge 2 in sandbox
