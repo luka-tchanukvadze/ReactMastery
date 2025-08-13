@@ -98,3 +98,6 @@ function DifferentContent() {
     </div>
   );
 }
+
+// theory lecutre
+// How Rendering Works Overview
