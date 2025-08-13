@@ -100,4 +100,4 @@ function DifferentContent() {
 }
 
 // theory lecutre
-// clean up
+// How Rendering Works The Render Phase
