@@ -100,4 +100,4 @@ function DifferentContent() {
 }
 
 // theory lecutre
-// How Rendering Works The Commit Phase
+// clean up
