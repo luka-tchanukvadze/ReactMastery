@@ -100,4 +100,3 @@ function DifferentContent() {
 }
 
 // theory lecutre
-// How Diffing Works
