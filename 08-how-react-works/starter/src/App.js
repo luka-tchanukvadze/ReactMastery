@@ -98,5 +98,3 @@ function DifferentContent() {
     </div>
   );
 }
-
-// Diffing Rules in Practice
