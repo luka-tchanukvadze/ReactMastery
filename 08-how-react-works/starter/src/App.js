@@ -98,3 +98,6 @@ function DifferentContent() {
     </div>
   );
 }
+
+// theory lecture
+// Diffing Rules in Practice
