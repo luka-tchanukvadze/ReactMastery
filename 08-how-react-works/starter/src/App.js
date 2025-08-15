@@ -99,4 +99,4 @@ function DifferentContent() {
   );
 }
 
-// theory lecutre
+// Diffing Rules in Practice
