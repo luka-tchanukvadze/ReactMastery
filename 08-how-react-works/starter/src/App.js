@@ -103,4 +103,4 @@ function DifferentContent() {
 }
 
 // theory lecture
-// practice
+// Rules for Render Logic Pure Components
