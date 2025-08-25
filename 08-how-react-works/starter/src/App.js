@@ -103,4 +103,4 @@ function DifferentContent() {
 }
 
 // theory lecture
-// Rules for Render Logic Pure Components
+// State Update Batching
