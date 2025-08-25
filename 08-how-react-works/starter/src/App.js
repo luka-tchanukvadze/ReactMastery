@@ -100,4 +100,4 @@ function DifferentContent() {
 }
 
 // theory lecture
-// the key prop
+// practice
