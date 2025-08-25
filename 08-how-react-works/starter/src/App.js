@@ -100,4 +100,4 @@ function DifferentContent() {
 }
 
 // theory lecture
-// Diffing Rules in Practice
+//
