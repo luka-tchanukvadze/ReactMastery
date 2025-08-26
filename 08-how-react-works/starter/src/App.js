@@ -124,4 +124,4 @@ function DifferentContent() {
 }
 
 // theory lecture
-// How Events Work in React
+// Libraries vs. Frameworks & The React Ecosystem
