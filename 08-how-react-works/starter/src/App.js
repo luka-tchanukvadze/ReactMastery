@@ -72,9 +72,12 @@ function TabContent({ item }) {
   }
 
   function handleTrippleInc() {
-    setLikes(likes + 1);
-    setLikes(likes + 1);
-    setLikes(likes + 1);
+    // setLikes(likes + 1);
+    // setLikes(likes + 1);
+    // setLikes(likes + 1);
+    setLikes((likes) => likes + 1);
+    setLikes((likes) => likes + 1);
+    setLikes((likes) => likes + 1);
   }
 
   function handleUndo() {
