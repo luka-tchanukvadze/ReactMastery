@@ -332,6 +332,3 @@ function WatchedMovie({ movie }) {
     </li>
   );
 }
-
-// theory lecture
-// The useEffect Dependency Array
