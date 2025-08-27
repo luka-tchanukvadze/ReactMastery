@@ -124,4 +124,4 @@ function DifferentContent() {
 }
 
 // theory lecture
-// Libraries vs. Frameworks & The React Ecosystem
+// The Component Lifecycle
