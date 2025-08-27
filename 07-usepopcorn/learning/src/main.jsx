@@ -16,12 +16,12 @@ function Test() {
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    {/* <App /> */}
-    <StarRating
+    <App />
+    {/* <StarRating
       maxRating={10}
       messages={["Terrible", "Bad", "Okay", "Good", "Amazing"]}
       defaultRating={3}
-    />
+    /> */}
 
     <Test />
   </React.StrictMode>
