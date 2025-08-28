@@ -67,6 +67,7 @@ export default function App() {
   const [error, setError] = useState("");
   const tempQuery = "interstellar";
   const [query, setQuery] = useState("");
+  const [selectedId, setSelectedId] = useState(null);
 
   /*
 
@@ -142,8 +143,14 @@ export default function App() {
         </Box>
 
         <Box>
-          <WatchedSummary watched={watched} />
-          <WatchedMovieList watched={watched} />
+          {selectedId ? (
+            <MovieDetails selectedId={selectedId} />
+          ) : (
+            <>
+              <WatchedSummary watched={watched} />
+              <WatchedMovieList watched={watched} />
+            </>
+          )}
         </Box>
       </Main>
     </>
@@ -301,6 +308,10 @@ function WatchedBox() {
   );
 }
 */
+
+function MovieDetails({ selectedId }) {
+  return <div className="details">{selectedId}</div>;
+}
 
 function WatchedSummary({ watched }) {
   const avgImdbRating = average(watched.map((movie) => movie.imdbRating));
