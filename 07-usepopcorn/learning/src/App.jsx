@@ -392,7 +392,9 @@ function MovieDetails({ selectedId, onCloseMovie, onAddWatched, watched }) {
       if (!title) return;
       document.title = `Movie | ${title}`;
 
-      // theory: The useEffect Cleanup Function
+      return function () {
+        document.title = "usePopcorn";
+      };
     },
     [title]
   );
