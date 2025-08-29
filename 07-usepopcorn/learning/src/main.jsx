@@ -23,6 +23,6 @@ ReactDOM.createRoot(document.getElementById("root")).render(
       defaultRating={3}
     /> */}
 
-    <Test />
+    {/* <Test /> */}
   </React.StrictMode>
 );
