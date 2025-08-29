@@ -391,6 +391,8 @@ function MovieDetails({ selectedId, onCloseMovie, onAddWatched, watched }) {
     function () {
       if (!title) return;
       document.title = `Movie | ${title}`;
+
+      // theory: The useEffect Cleanup Function
     },
     [title]
   );
