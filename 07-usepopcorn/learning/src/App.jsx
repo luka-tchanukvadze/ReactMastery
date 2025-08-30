@@ -266,6 +266,9 @@ function MovieDetails({ selectedId, onCloseMovie, onAddWatched, watched }) {
     Genre: genre,
   } = movie;
 
+  // if (imdbRating > 8) [InspectionPanel, setisTop] = useState(true);
+  // if (imdbRating > 8) return <p>Greates ever</p>;
+
   function handleAdd() {
     const newWatchedMovie = {
       imdbID: selectedId,
