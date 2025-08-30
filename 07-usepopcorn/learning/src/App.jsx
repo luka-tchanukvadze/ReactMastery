@@ -268,6 +268,13 @@ function MovieDetails({ selectedId, onCloseMovie, onAddWatched, watched }) {
 
   // if (imdbRating > 8) [InspectionPanel, setisTop] = useState(true);
   // if (imdbRating > 8) return <p>Greates ever</p>;
+  // const [isTop, setIsTop] = useState(imdbRating > 8 )
+  // useEffect(
+  //   function () {
+  //     setIsTop(imdbRating > 8);
+  //   },
+  //   [imdbRating]
+  // );
 
   function handleAdd() {
     const newWatchedMovie = {
