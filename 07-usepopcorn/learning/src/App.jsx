@@ -477,4 +477,4 @@ function WatchedMovie({ movie, onDeleteWatched }) {
 }
 
 // theory lecture
-//  useState Summary
+// How NOT to Select DOM Elements in React
