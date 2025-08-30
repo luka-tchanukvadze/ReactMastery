@@ -475,3 +475,6 @@ function WatchedMovie({ movie, onDeleteWatched }) {
     </li>
   );
 }
+
+// theory lecture
+//  useState Summary
