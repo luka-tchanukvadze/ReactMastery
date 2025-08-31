@@ -423,5 +423,4 @@ function WatchedMovie({ movie, onDeleteWatched }) {
   );
 }
 
-// theory lecture
-// What are Custom Hooks When to Create One
+// challenge: CHALLENGE #1 useGeolocate
