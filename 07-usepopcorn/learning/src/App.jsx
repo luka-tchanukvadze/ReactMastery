@@ -424,4 +424,4 @@ function WatchedMovie({ movie, onDeleteWatched }) {
 }
 
 // theory lectures
-//   Class Components vs. Function Components
+// Starting the Classy Weather App
