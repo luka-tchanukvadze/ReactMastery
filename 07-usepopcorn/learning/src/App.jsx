@@ -424,4 +424,4 @@ function WatchedMovie({ movie, onDeleteWatched }) {
 }
 
 // theory lectures
-// Removing Boilerplate Code With Class Fields
+// Child to Parent Communication
