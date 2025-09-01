@@ -424,4 +424,4 @@ function WatchedMovie({ movie, onDeleteWatched }) {
 }
 
 // theory lectures
-// Child to Parent Communication
+// Lifecycle Methods
