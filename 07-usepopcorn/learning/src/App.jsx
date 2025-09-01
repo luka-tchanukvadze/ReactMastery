@@ -423,4 +423,5 @@ function WatchedMovie({ movie, onDeleteWatched }) {
   );
 }
 
-// challenge: CHALLENGE #1 useGeolocate
+// theory lectures
+//  Our First Class Component
