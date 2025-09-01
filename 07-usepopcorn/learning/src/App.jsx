@@ -424,4 +424,4 @@ function WatchedMovie({ movie, onDeleteWatched }) {
 }
 
 // theory lectures
-//  Our First Class Component
+//  Working With Event Handlers
