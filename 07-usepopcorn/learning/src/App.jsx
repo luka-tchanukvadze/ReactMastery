@@ -424,4 +424,4 @@ function WatchedMovie({ movie, onDeleteWatched }) {
 }
 
 // theory lectures
-// Starting the Classy Weather App
+// Fetching Weather Data
