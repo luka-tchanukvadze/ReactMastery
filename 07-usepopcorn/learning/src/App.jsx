@@ -424,4 +424,4 @@ function WatchedMovie({ movie, onDeleteWatched }) {
 }
 
 // theory lectures
-//  Working With Event Handlers
+//   Class Components vs. Function Components
