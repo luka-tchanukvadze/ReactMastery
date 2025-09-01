@@ -424,4 +424,4 @@ function WatchedMovie({ movie, onDeleteWatched }) {
 }
 
 // theory lectures
-// Displaying the Weather
+// Removing Boilerplate Code With Class Fields
