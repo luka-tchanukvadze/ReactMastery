@@ -10,6 +10,3 @@ function App() {
 }
 
 export default App;
-
-// theory lecture
-// Managing State With useReducer
