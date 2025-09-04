@@ -3,6 +3,8 @@ import "./App.css";
 import DateCounter from "./DateCounter";
 import Header from "./Header";
 import MainSec from "./MainSec";
+import Loader from "./Loader";
+import Error from "./Error";
 
 const initialState = {
   questions: [],
@@ -32,7 +34,7 @@ function reducer(state, action) {
 }
 
 function App() {
-  const [state, dispatch] = useReducer(reducer, initialState);
+  const [{ questions, status }, dispatch] = useReducer(reducer, initialState);
 
   useEffect(function () {
     fetch("http://localhost:8000/questions")
@@ -47,8 +49,8 @@ function App() {
         <Header />
 
         <MainSec className="main">
-          <p>1/15</p>
-          <p>Question?</p>
+          {status === "loading" && <Loader />}
+          {status === "error" && <Error />}
         </MainSec>
       </div>
     </>
