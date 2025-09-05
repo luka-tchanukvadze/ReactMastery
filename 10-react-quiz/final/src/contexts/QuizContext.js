@@ -118,5 +118,3 @@ function useQuiz() {
 }
 
 export { QuizProvider, useQuiz };
-
-// challenge 1 in codesandbox
