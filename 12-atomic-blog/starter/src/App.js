@@ -182,6 +182,3 @@ function Footer() {
 }
 
 export default App;
-
-// thoery lecture
-// Thinking In React Advanced State Management
