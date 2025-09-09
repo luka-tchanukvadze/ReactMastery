@@ -10,7 +10,7 @@ function Map() {
 
   console.log(setSearchParams);
   return (
-    <div className={styles.mapContainer} onClick={navigate("form")}>
+    <div className={styles.mapContainer} onClick={() => navigate("form")}>
       <h1>Map</h1>
     </div>
   );
