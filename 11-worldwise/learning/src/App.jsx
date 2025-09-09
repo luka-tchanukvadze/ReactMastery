@@ -42,6 +42,3 @@ function App() {
 }
 
 export default App;
-
-// theory lecture
-// Storing State in the URL
