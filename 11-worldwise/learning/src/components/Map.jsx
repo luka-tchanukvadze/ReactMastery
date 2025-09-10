@@ -34,14 +34,21 @@ function Map() {
     [mapLat, mapLng]
   );
 
-  console.log([mapLat, mapLng]);
+  useEffect(
+    function () {
+      if (geolocationPosition)
+        setMapPosition([geolocationPosition.lat, geolocationPosition.lng]);
+    },
+    [geolocationPosition]
+  );
 
-  console.log(setSearchParams);
   return (
     <div className={styles.mapContainer}>
-      <Button type={"position"} onClick={getPosition}>
-        {isLoadingPosition ? "Loading..." : "Use your position"}
-      </Button>
+      {!geolocationPosition && (
+        <Button type={"position"} onClick={getPosition}>
+          {isLoadingPosition ? "Loading..." : "Use your position"}
+        </Button>
+      )}
       <MapContainer
         center={mapPosition}
         // center={[mapLat, mapLng]}
