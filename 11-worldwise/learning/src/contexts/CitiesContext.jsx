@@ -1,4 +1,4 @@
-import { useEffect, useReducer } from "react";
+import { act, useEffect, useReducer } from "react";
 import { useContext } from "react";
 import { useState } from "react";
 import { createContext } from "react";
@@ -29,9 +29,19 @@ function reducer(state, action) {
     case "city/loaded":
       return { ...state, isLoading: false, currentCity: action.payload };
 
-    case "cities/created":
+    case "city/created":
+      return {
+        ...state,
+        isLoading: false,
+        cities: [...state.cities, action.payload],
+      };
 
-    case "cities/deleted":
+    case "city/deleted":
+      return {
+        ...state,
+        isLoading: false,
+        cities: state.cities.filter((city) => city.id !== action.payload),
+      };
 
     case "rejected":
       return { ...state, error: action.payload, isLoading: false };
@@ -93,9 +103,12 @@ function CitiesProvider({ children }) {
       });
       const data = await res.json();
 
-      setCities((cities) => [...cities, data]);
+      dispatch({ type: "city/created", payload: data });
     } catch (error) {
-      alert("There was an error creating city...");
+      dispatch({
+        type: "rejected",
+        payload: "There was an error creating city...",
+      });
     }
   }
 
@@ -106,9 +119,12 @@ function CitiesProvider({ children }) {
         method: "DELETE",
       });
 
-      setCities((cities) => cities.filter((city) => city.id !== id));
+      dispatch({ type: "city/deleted", payload: id });
     } catch (error) {
-      alert("There was an error DELETING city...");
+      dispatch({
+        type: "rejected",
+        payload: "There was an error DELETING city...",
+      });
     }
   }
 
