@@ -26,6 +26,9 @@ function reducer(state, action) {
         cities: action.payload,
       };
 
+    case "city/loaded":
+      return { ...state, isLoading: false, currentCity: action.payload };
+
     case "cities/created":
 
     case "cities/deleted":
@@ -53,8 +56,10 @@ function CitiesProvider({ children }) {
 
         dispatch({ type: "cities/loaded", payload: data });
       } catch (error) {
-        dispatch({ type: "rejected", payload: error.message });
-      } finally {
+        dispatch({
+          type: "rejected",
+          payload: "There was an error loading data...",
+        });
       }
     }
 
@@ -62,21 +67,23 @@ function CitiesProvider({ children }) {
   }, []);
 
   async function getCity(id) {
+    dispatch({ type: "loading" });
     try {
-      setIsLoading(true);
       const res = await fetch(`${BASE_URL}/cities/${id}`);
       const data = await res.json();
-      setCurrentCity(data);
+
+      dispatch({ type: "city/loaded", payload: data });
     } catch (error) {
-      alert("There was an error loading data...");
-    } finally {
-      setIsLoading(false);
+      dispatch({
+        type: "rejected",
+        payload: "There was an error loading data...",
+      });
     }
   }
 
   async function createCity(newCity) {
+    dispatch({ type: "loading" });
     try {
-      setIsLoading(true);
       const res = await fetch(`${BASE_URL}/cities`, {
         method: "POST",
         body: JSON.stringify(newCity),
@@ -89,14 +96,12 @@ function CitiesProvider({ children }) {
       setCities((cities) => [...cities, data]);
     } catch (error) {
       alert("There was an error creating city...");
-    } finally {
-      setIsLoading(false);
     }
   }
 
   async function deleteCity(id) {
+    dispatch({ type: "loading" });
     try {
-      setIsLoading(true);
       await fetch(`${BASE_URL}/cities/${id}`, {
         method: "DELETE",
       });
@@ -104,8 +109,6 @@ function CitiesProvider({ children }) {
       setCities((cities) => cities.filter((city) => city.id !== id));
     } catch (error) {
       alert("There was an error DELETING city...");
-    } finally {
-      setIsLoading(false);
     }
   }
 
