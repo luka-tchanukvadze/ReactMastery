@@ -7,7 +7,14 @@ const initialState = {
   isAuthenticated: false,
 };
 
-function reducer(state, action) {}
+function reducer(state, action) {
+  switch (action.type) {
+    case "login":
+      return { ...state, user: action.payload, isAuthenticated: true };
+    case "logout":
+      return { ...state, user: null, isAuthenticated: false };
+  }
+}
 
 function AuthProvider({ children }) {
   const [{ user, isAuthenticated }, dispatch] = useReducer(
