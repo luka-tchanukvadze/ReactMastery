@@ -3,6 +3,10 @@ import { createContext, useContext } from "react";
 const AuthContext = createContext();
 
 function AuthProvider({ children }) {
+  function login(email, password) {}
+
+  function logout() {}
+
   return <AuthContext.Provider>{children}</AuthContext.Provider>;
 }
 
