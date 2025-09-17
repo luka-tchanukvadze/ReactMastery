@@ -27,7 +27,7 @@ const FAKE_USER = {
 
 function AuthProvider({ children }) {
   const [{ user, isAuthenticated }, dispatch] = useReducer(
-    reduceRight,
+    reducer,
     initialState
   );
 
