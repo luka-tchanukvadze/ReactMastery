@@ -12,25 +12,21 @@ import Progress from "./components/Progress";
 import FinishScreen from "./components/FinishScreen";
 import Timer from "./components/Timer";
 import Footer from "./components/Footer";
+import { useQuiz } from "./context/QuizContext";
 
 function App() {
-  const [
-    { questions, status, index, answer, points, highscore, secondsRemaining },
+  const {
+    questions,
+    status,
+    index,
+    answer,
+    points,
+    highscore,
+    secondsRemaining,
+    numQuestions,
+    maxPossiblePoints,
     dispatch,
-  ] = useReducer(reducer, initialState);
-
-  const numQuestions = questions.length;
-  const maxPossiblePoints = questions.reduce(
-    (prev, cur) => prev + cur.points,
-    0
-  );
-
-  useEffect(function () {
-    fetch("http://localhost:8000/questions")
-      .then((res) => res.json())
-      .then((data) => dispatch({ type: "dataReceived", payload: data }))
-      .catch((err) => dispatch({ type: "dataFailed" }));
-  }, []);
+  } = useQuiz();
 
   return (
     <>
