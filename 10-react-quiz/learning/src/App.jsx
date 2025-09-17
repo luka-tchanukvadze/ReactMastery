@@ -12,7 +12,7 @@ import Progress from "./components/Progress";
 import FinishScreen from "./components/FinishScreen";
 import Timer from "./components/Timer";
 import Footer from "./components/Footer";
-import { useQuiz } from "./context/QuizContext";
+import { useQuiz } from "./context/QuizContext.js";
 
 function App() {
   const {
