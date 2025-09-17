@@ -182,3 +182,5 @@ function Footer() {
 }
 
 export default App;
+
+// thoery lecture:  Performance Optimization and Wasted Renders
