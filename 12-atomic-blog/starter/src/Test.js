@@ -44,3 +44,5 @@ export default function Test() {
     </div>
   );
 }
+
+// theory lecture: Understanding memo
