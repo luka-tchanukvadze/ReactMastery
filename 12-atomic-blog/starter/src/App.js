@@ -182,5 +182,3 @@ function Footer() {
 }
 
 export default App;
-
-// theory lecture: The Profiler Developer Tool
