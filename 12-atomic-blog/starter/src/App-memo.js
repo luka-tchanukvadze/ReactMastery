@@ -198,3 +198,5 @@ function Footer() {
 }
 
 export default App;
+
+// thoery lecture: Understanding useMemo and useCallback
