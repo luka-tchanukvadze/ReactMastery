@@ -61,3 +61,5 @@ function App() {
 }
 
 export default App;
+
+// theory lecture: useEffect Rules and Best Practices
