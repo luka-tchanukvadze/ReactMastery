@@ -70,5 +70,3 @@ function App() {
 }
 
 export default App;
-
-// theory lecture: Don't Optimize Prematurely!
