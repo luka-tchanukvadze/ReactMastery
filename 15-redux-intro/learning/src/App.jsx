@@ -25,3 +25,5 @@ function App() {
 }
 
 export default App;
+
+// theory lecture: Redux Middleware and Thunks
