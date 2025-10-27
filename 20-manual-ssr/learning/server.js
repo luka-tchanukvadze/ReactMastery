@@ -1,6 +1,8 @@
 const { readFileSync } = require("fs");
 const { createServer } = require("http");
 const { parse } = require("url");
+const { renderToString } = require("react-dom/server");
+const React = require("react");
 
 const pizzas = [
   {
@@ -68,8 +70,10 @@ const server = createServer((req, res) => {
   const pathName = parse(req.url, true).pathname;
 
   if (pathName === "/") {
+    const renderedHtml = renderToString(<Home />);
+
     res.writeHead(200, { "Content-type": "text/html" });
-    res.end(htmlTemplate);
+    res.end(renderedHtml);
   } else if (pathName === "/test") {
     res.end("Test");
   } else {
