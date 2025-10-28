@@ -83,5 +83,3 @@ const server = createServer((req, res) => {
 });
 
 server.listen(8000, () => console.log("Listening for request on port 8000"));
-
-// The Missing Piece Hydration
