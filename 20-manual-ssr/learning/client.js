@@ -59,5 +59,3 @@ function MenuItem({ pizza }) {
     </li>
   );
 }
-
-// theory: What is Next.js
