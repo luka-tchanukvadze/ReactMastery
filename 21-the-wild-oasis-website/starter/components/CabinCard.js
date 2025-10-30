@@ -54,6 +54,6 @@ function CabinCard({ cabin }) {
   );
 }
 
-// How RSC Works Behind the Scenes
+// RSC vs. SSR How are They Related
 
 export default CabinCard;
