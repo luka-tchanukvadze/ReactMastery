@@ -54,4 +54,6 @@ function CabinCard({ cabin }) {
   );
 }
 
+// How RSC Works Behind the Scenes
+
 export default CabinCard;
